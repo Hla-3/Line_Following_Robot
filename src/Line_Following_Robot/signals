@@ -1,0 +1,26 @@
+-N
+0 Simulator 1
+cmd_vel double[2] i 0
+robot_pose double[3] o 0
+reference_path double[3] o 0
+-N
+1 Controller 1
+cmd_vel double[2] o 0
+robot_pose double[3] i 0
+reference_path double[3] i 0
+-N
+2 Plotter 1
+cmd_vel double[2] i 0
+robot_pose double[3] i 0
+reference_path double[3] i 0
+-CAN
+10 0 i [cmd_vel:0:64]
+11 0 o [robot_pose:0:64]
+12 0 o [reference_path:0:64]
+10 1 o [cmd_vel:0:64]
+11 1 i [robot_pose:0:64]
+12 1 i [reference_path:0:64]
+10 2 i [cmd_vel:0:64]
+11 2 i [robot_pose:0:64]
+12 2 i [reference_path:0:64]
+-END

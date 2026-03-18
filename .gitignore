@@ -1,0 +1,9 @@
+build/
+
+server/FabricServer
+
+*.log
+
+__pycache__/
+
+.vsiTmp/
